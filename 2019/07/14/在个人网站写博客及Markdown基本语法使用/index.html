@@ -25,7 +25,7 @@
 <meta property="og:image" content="http://selfsudo.github.io/2019/07/14/在个人网站写博客及Markdown基本语法使用/name.jpg">
 <meta property="og:image" content="http://selfsudo.github.io/2019/07/14/在个人网站写博客及Markdown基本语法使用/yuanli1.jpg">
 <meta property="og:image" content="http://selfsudo.github.io/2019/07/14/在个人网站写博客及Markdown基本语法使用/yuanli2.jpg">
-<meta property="og:updated_time" content="2019-07-16T04:15:58.040Z">
+<meta property="og:updated_time" content="2019-07-16T06:59:24.309Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在个人网站写博客及Markdown基本语法使用">
 <meta name="twitter:description" content="前言网络大牛大都拥有个人网站并在个人网站上写博客，整理分享自己的所得知识。许多人看着羡慕便开始搭建自己的个人网站，网站搭建好后却不知道如何动手书写自己的博客。所以本文以Hexo博客为例介绍了如何动手写博客、上传博客、删除博客。以及书写博客所需要的编辑器——Markdown编辑器的选择及语法使用。">
@@ -275,7 +275,7 @@
 </li>
 </ul>
 </li>
-<li><h3 id="基本语法使用"><a href="#基本语法使用" class="headerlink" title="基本语法使用"></a>基本语法使用</h3><p>本章参考：<a href="https://www.jianshu.com/p/56d99a3049a5" target="_blank" rel="noopener">用Hexo写出第一篇博客</a> 写出自己使用Makdown的所得所感<br>（下面有些例子展示图片，是因为在Markdown下编辑这些例子会出现文章格式错误，请给予理解，谢谢！）</p>
+<li><h3 id="基本语法使用"><a href="#基本语法使用" class="headerlink" title="基本语法使用"></a>基本语法使用</h3><p>本章参考：<a href="https://www.runoob.com/markdown/md-tutorial.html" target="_blank" rel="noopener">Markdown教程</a> 写出自己使用Makdown的所得所感<br>（下面有些例子展示图片，是因为在Markdown下编辑这些例子会出现文章格式错误，请给予理解，谢谢！）</p>
 <h4 id="1-斜体、粗体和删除线"><a href="#1-斜体、粗体和删除线" class="headerlink" title="1.斜体、粗体和删除线"></a>1.斜体、粗体和删除线</h4><p> <em>写法：</em></p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*这是斜体* 或 _这也是斜体_</span><br><span class="line">**这是粗体**</span><br><span class="line">***这是加粗斜体***</span><br><span class="line">~~这是删除线~~</span><br></pre></td></tr></table></figure>
 
@@ -683,27 +683,33 @@
 
 
 
-	
-
-  <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div> 
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script type="text/javascript">
-
-if(true){
-	var gitalk = new Gitalk({
-  	clientID: 'ffcc3536ae1474b0756e',
-  	clientSecret: '10d92e75bc8720c06b48f95ccb42845abfa5b5c0',
-  	repo: 'selfsudo.github.io',
-  	owner: 'selfsudo',
-  	admin: ['selfsudo'],
-  	id: 'Sun Jul 14 2019 09:12:50 GMT+0800',
-  	distractionFreeMode: 'true'
-})
-gitalk.render('gitalk-container') 
-}
+<section id="comments" class="comments">
+  <style>
+    .comments{margin:30px;padding:10px;background:#fff}
+    @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+  </style>
+  <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "g0zw5cgggWz1y05QEgzp2Bfy6-gzGzoHsz",
+            app_key: "NGNqfjsgEIhWbvTr2c4S9A3s",
+            placeholder: "Just go go",
+            avatar:"mm"
+        });
+    }
 </script>
+
+  </section>
+
+
   
 
   
@@ -714,7 +720,6 @@ gitalk.render('gitalk-container')
   
 
  
-
 
           </div>
         </div>
